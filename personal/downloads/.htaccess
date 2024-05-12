@@ -1,0 +1,5 @@
+#RewriteBase /
+SetEnvIfNoCase Referer ^https?://lk\.cr30\.ru.?/ allowed_referer
+#Order Allow,Deny
+#Allow from env=allowed_referer
+Require all granted

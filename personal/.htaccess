@@ -1,0 +1,11 @@
+DirectoryIndex index.php
+Options -Indexes
+RewriteEngine On
+
+ErrorDocument 400 /personal/index.php
+ErrorDocument 401 /index.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /personal/index.php
+RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+RewriteRule ^ %{REQUEST_URI}.php [L]
+
